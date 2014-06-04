@@ -31,8 +31,6 @@ instruccion = canal.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE,ResultSet.CO
 } catch(java.lang.ClassNotFoundException e){} catch(SQLException e) {};
 
 //cargando los campos a grabar
-
-// excepto clave porque en mysql es de tipo auto-increment
 int clave = Integer.parseInt(request.getParameter("CLAVE"));
 
 String nombre = request.getParameter("NOMBRE");
@@ -41,9 +39,10 @@ int edad = Integer.parseInt(request.getParameter("EDAD"));
 
 
 
+
 // insert into tabla(nombre,edad,estatura) values('juan', 15, 1.88);
 
-String q="insert into mitabla(clave,nombre,edad) values(\"" +clave+"\","+nombre+"\","+edad+")";
+String q="insert into mitabla(nombre,edad,clave) values('"+nombre+"',"+edad+","+clave+"); ";
 
 try {
 
@@ -73,14 +72,15 @@ canal.close();
 
 out.println("<FORM ACTION=Insertar.jsp METHOD=post>");
 
-out.println("CLAVE :<INPUT TYPE=TEXT NAME=CLAVE><BR>");
-
 out.println("NOMBRE :<INPUT TYPE=TEXT NAME=NOMBRE><BR>");
 
 out.println("EDAD :<INPUT TYPE=TEXT NAME=EDAD><BR>");
+
+out.println("CLAVE :<INPUT TYPE=TEXT NAME=CLAVE><BR>");
 
 out.println("<INPUT TYPE=SUBMIT NAME=GRABAR VALUE=INSERTAR ><BR>");
 
 out.println("</FORM>");
 
 %>
+<a href="Opciones.jsp">volver</a>

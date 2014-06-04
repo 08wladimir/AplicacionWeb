@@ -42,3 +42,5 @@ try {tablaresultados.close();instruccion.close();conexionbd.close();} catch(SQLE
 
 %>
 
+
+<a href="Opciones.jsp">volver</a>

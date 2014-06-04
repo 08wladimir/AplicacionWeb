@@ -67,3 +67,4 @@ out.println("<INPUT TYPE=SUBMIT NAME=OK VALUE=ELIMINAR><BR>");
 out.println("</FORM>");
 
 %>
+<a href="Opciones.jsp">volver</a>

@@ -115,3 +115,4 @@ out.println("<INPUT TYPE=SUBMIT NAME=BUSCAR VALUE=BUSCAR ><BR>");
 out.println("</FORM>");
 
 %>
+<a href="Opciones.jsp">volver</a>

@@ -73,3 +73,4 @@ out.println("</FORM>");
 
 %>
 
+<a href="Opciones.jsp">volver</a>
